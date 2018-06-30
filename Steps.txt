@@ -1,0 +1,22 @@
+#Instalar conda y crear entorno.
+conda create -n nameEntorno python=3.6
+
+#Activar entorno
+activate nameEntorno
+
+Iniciando Proyecto
+============================================
+django-admin startproject nameProject
+
+python manage.py startapp nameApp
+
+python manage.py runserver
+
+python manage.py makemigrations
+
+python manage.py migrate
+
+=============================================
+
+pip install pillow
+pip install django-ckeditor
