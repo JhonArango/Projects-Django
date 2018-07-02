@@ -7,7 +7,8 @@ from registration.models import Profile
 # Create your views here.
 class ProfilesListView(ListView):
     model=Profile
-    template_name = 'profiles/profile_list.html'
+    template_name = 'profiles/profiles_list.html'
+    paginate_by = 3
 
 class ProfilesDetailView(DetailView):
     model=Profile

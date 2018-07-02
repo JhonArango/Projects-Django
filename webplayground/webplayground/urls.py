@@ -8,7 +8,7 @@ urlpatterns = [
     path('',include('core.urls')),
     path('pages/',include(pages_patterns)),
     path('admin/', admin.site.urls),
-    path('profiles/',include(profiles_patterns))
+    path('profiles/',include(profiles_patterns)),
     #paths de Auth
     path('accounts/',include('django.contrib.auth.urls')),
     path('accounts/',include('registration.urls')),

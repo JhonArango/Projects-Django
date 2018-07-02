@@ -1,7 +1,7 @@
 from django.urls import path
-from .views import PageListView,PageDetailView
+from .views import ProfilesListView ,ProfilesDetailView
 
 profiles_patterns = ([
-    path('', PageListView.as_view(), name='list'),
-    path('<username>/', PageDetailView.as_view(), name='detail'),  
+    path('', ProfilesListView.as_view(), name='list'),
+    path('<username>/', ProfilesDetailView.as_view(), name='detail'),  
 ],'profiles')
