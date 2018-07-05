@@ -1,0 +1,7 @@
+<p><a href="{% url 'countries_detail' country.code %}">{{country.name}}</a> - - {{country.code}}</p>
+
+{% if country.name == 'Colombia'%}
+    <h3>Tierra querida</h3>
+{% endif %}
+<p>lorem: {% lorem how_many_paragraphs %}</p>
+<p>Fecha Actual: {% now "Y-m-d" %}</p>

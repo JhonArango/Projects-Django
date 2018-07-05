@@ -1,0 +1,11 @@
+{% extends "countries/base.html" %}
+{% block title %} Home {% endblock title %}
+{% block content %}
+
+<h1>Hola mundo</h1>
+{% for country in countries %}
+    {% include "countries/country_for.html" %}
+{% endfor %}
+  
+{% endblock content %}
+
