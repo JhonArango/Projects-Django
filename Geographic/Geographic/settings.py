@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'countries.apps.CountriesConfig',
     'continents.apps.ContinentsConfig',
+    'people.apps.PeopleConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

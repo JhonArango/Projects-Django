@@ -1,4 +1,6 @@
-<p style='color:beige'>{{continente.name}}</p>
+<p style='color:springgreen'>
+    <a href="{% url 'continent_detail' continente.id %}">{{continente.id}} - - {{continente.name}}</a>
+</p>
 
 {% if continente.name == 'America'%}
     <h3>Mejor continente</h3>

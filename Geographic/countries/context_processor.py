@@ -1,4 +1,5 @@
 from countries.models import Country
+from continents.models import Continent
 
 def countries_data(request):
     countries = Country.objects.all()
@@ -6,11 +7,5 @@ def countries_data(request):
 
 
 def continents_data(request):
-    America = {'name':'America','color':'Rojo'}
-    Europa = {'name':'Europa','color':'Azul'}
-    Asia = {'name':'Asia','color':'Amarillo'}
-    Africa = {'name':'Africa','color':'Negro'}
-    Oceania = {'name':'Oceania','color':'Verde'}
-
-    continents = [America,Europa,Asia,Africa,Oceania]
+    continents = Continent.objects.all()
     return {'continents':continents}

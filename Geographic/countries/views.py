@@ -1,8 +1,18 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from countries.models import Country
 from django.views.generic import TemplateView
+from django.views.generic.list import ListView
 
 # Create your views here.
+class CountrySearchView(ListView):
+    template_name = 'countries/search.html'
+    model = Country
+
+    def get_queryset(self):
+        query = self.kwargs['query']
+        return Country.objects.filter(continent__name=query)
+
 class HomeView(TemplateView):
     template_name = "countries/home.html"
 

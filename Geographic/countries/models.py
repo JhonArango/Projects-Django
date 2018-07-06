@@ -18,4 +18,4 @@ class Country(models.Model):
 
     class Meta:
         verbose_name = 'Pais'
-        verbose_name_plural = 'Paices'
+        verbose_name_plural = 'Paises'
