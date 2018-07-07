@@ -1,10 +1,32 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse,JsonResponse
 from countries.models import Country
 from django.views.generic import TemplateView
 from django.views.generic.list import ListView
+from countries.forms import CountryCreateFormModel
 
 # Create your views here.
+
+class CountryCreateView(TemplateView):
+    template_name = "countries/register.html"
+
+    def dispatch(self, request, *args, **kwargs):
+        self.form = CountryCreateFormModel(request.POST or None)
+        return super().dispatch(request, *args, **kwargs)
+    
+
+    def get_context_data(self,*args,**kwargs):
+        return {'form':self.form}
+    
+    def post(self,request,*args,**kwargs):
+        if self.form.is_valid():
+            country = self.form.save()
+            return JsonResponse({
+                'name':country.name
+            })
+        return self.get(request,*args,**kwargs)
+
+
 class CountrySearchView(ListView):
     template_name = 'countries/search.html'
     model = Country

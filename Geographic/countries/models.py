@@ -3,10 +3,10 @@ from django.db import models
 # Create your models here.
 class Country(models.Model):
     CODES_CHOISES=(
-        ('colombia','CO'),
-        ('Peru','PE'),
-        ('Argentina','ARG'),
-        ('Usa','USA'),
+        ('CO','colombia'),
+        ('PE','Peru'),
+        ('ARG','Argentina'),
+        ('USA','Usa'),
 
     )
     name = models.CharField(max_length=100,verbose_name='Nombre')

@@ -5,8 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> Geographic |{% block title %}{% endblock title %}</title>
+    <style>
+        div.a {
+            background-color: lightblue;
+        }
+    </style>
 </head>
 <body>
-{% block content %} {% endblock content %}
+    {% block content %} {% endblock content %}
+    <!-- <div class=" {% if request.session.testab == "a" %}   a  {% endif %}">
+         contenido
+    </div> -->
+   
 </body>
 </html>
