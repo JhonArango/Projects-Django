@@ -128,3 +128,6 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,"media")
 
+#Api para cobros
+STRIPE_API_KEY = 'sk_test_DtPptAt56yksjIS2LjANDcrk'
+STRIPE_PUBLIC_API_KEY = 'pk_test_d6tiyDx6VF8QJXsnIyRlTclq'
